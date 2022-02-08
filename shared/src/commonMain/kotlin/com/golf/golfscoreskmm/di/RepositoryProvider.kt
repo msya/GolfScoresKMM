@@ -30,7 +30,7 @@ object RepositoryProvider {
 
     private fun provideApolloClient(): ApolloClient =
         ApolloClient.Builder()
-            .serverUrl("http://192.168.1.4:8080/graphql")
+            .serverUrl("http://localhost:8080/graphql")
             .build()
 
 }
