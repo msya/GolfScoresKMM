@@ -1,0 +1,35 @@
+query GetTournamentInfo {
+    tournamentInfo {
+        name
+        date
+        logo
+    }
+}
+
+query GetScores($time: String!) {
+    scores(params: {time: $time}) {
+        name
+        position
+        round
+        teeTime
+        thru
+        tot
+    }
+}
+
+query GetWeather($time: String!) {
+    weather(params: {time: $time}) {
+        condition
+        temperature
+        time
+        wind_direction
+        wind_speed
+    }
+}
+
+query GetPlayers {
+    players {
+        firstName
+        lastName
+    }
+}

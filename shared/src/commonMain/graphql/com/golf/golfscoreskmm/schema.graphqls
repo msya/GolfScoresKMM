@@ -1,0 +1,59 @@
+enum Condition {
+  CLOUDY
+  MOSTLY_CLOUDY
+  PARTLY_CLOUDY
+  FAIR
+}
+
+type Player {
+  birthplace: String!
+  firstName: String!
+  heightCm: Float!
+  id: Int!
+  lastName: String!
+  turnedProYear: Int!
+  weight: Int!
+}
+
+# Player's information on position, tee time, total and round score
+type PlayerScoreDisplayData {
+  name: String!
+  position: String!
+  round: String!
+  teeTime: String
+  thru: String!
+  tot: String!
+}
+
+type Query {
+  # Returns get players
+  players: [Player!]!
+
+  # Return list of scores
+  scores(params: TournamentQueryParametersInput!): [PlayerScoreDisplayData!]!
+
+  # Returns tournament information
+  tournamentInfo: TournamentInfo!
+
+  # Returns weather data for time
+  weather(params: TournamentQueryParametersInput!): WeatherData!
+}
+
+# Tournament name and start and end dates.
+type TournamentInfo {
+  date: String!
+  logo: String!
+  name: String!
+}
+
+input TournamentQueryParametersInput {
+  time: String!
+}
+
+type WeatherData {
+  condition: Condition!
+  temperature: String!
+  time: String!
+  wind_direction: String!
+  wind_speed: String!
+}

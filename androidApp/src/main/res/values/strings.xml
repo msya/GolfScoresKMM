@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pos">POS</string>
+    <string name="player">PLAYER</string>
+    <string name="total">TOT</string>
+    <string name="thru">THRU</string>
+    <string name="round">RD</string>
+    <string name="error_loading_scores">Error loading scores</string>
+    <string name="error_loading_weather">Error loading weather</string>
+    <string name="error_loading_players">Error loading players</string>
+    <string name="error_loading_tournament_info">Error loading tournament info</string>
+    <string name="golf_tournament">Golf Tournament</string>
+    <string name="scores_bottom_nav_title">Scores</string>
+    <string name="players_bottom_nav_title">Players</string>
+    <string name="weather_bottom_nav_title">Weather</string>
+</resources>
